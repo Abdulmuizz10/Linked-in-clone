@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Main = ({ post, deletePost, user, doubleCLick }) => {
-  if (window.innerWidth <= 568) {
-    const doubleCLick = () => {};
-  }
+const Main = ({ post, deletePost, user }) => {
   return (
     <Container>
       <div>
@@ -28,12 +25,7 @@ const Main = ({ post, deletePost, user, doubleCLick }) => {
             </a>
             <button>
               <i className="bx bx-dots-horizontal-rounded"></i>
-              <Span
-                onClick={() => deletePost(post.id)}
-                onDoubleClick={() => doubleCLick(post.id)}
-              >
-                Delete post
-              </Span>
+              <Span onClick={() => deletePost(post.id)}>Delete post</Span>
             </button>
           </SharedActor>
           <Description>{post.description}</Description>
