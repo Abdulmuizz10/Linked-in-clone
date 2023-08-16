@@ -107,7 +107,7 @@ const Article = styled(CommonCard)`
 
 const Span = styled.div`
   position: absolute;
-  top: 0;
+  top: 10;
   right: -20px;
   font-size: 0.8rem;
   background: white;

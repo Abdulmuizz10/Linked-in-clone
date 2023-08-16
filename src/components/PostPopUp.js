@@ -61,7 +61,10 @@ const PostPopUp = ({ setPostPopUp, addPost, user }) => {
               </UploadImage>
               <div className="buttons">
                 <div className="left">
-                  <buttons onClick={() => setShowImg(!showImg)}>
+                  <buttons
+                    onClick={() => setShowImg(!showImg)}
+                    style={{ animation: "blink2 1s infinite" }}
+                  >
                     <i className="bx bx-image"></i>
                   </buttons>
                   <button disabled>
@@ -197,6 +200,7 @@ const Form = styled.div`
           background: rgba(0, 0, 0, 0.1);
           border: 2px solid rgba(0, 0, 0, 0.2);
           border-radius: 3px;
+          animation: blink 0.1s infinite;
 
           i {
             color: rgba(0, 0, 0, 0.9);

@@ -39,6 +39,9 @@ const Login = () => {
       {signInPopUp && <SignInPopUp setSignInPopUp={setSignInPopUp} />}
       {loginPopUp && <LoginPopUp setLoginPopUp={setLoginPopUp} />}
       {googlePopUp && <GooglePopUp setGooglePopUp={setGooglePopUp} />}
+      <p style={{ textAlign: "center" }}>
+        Copywrite ©2022 | Made by Abdul Muizz
+      </p>
     </Container>
   );
 };

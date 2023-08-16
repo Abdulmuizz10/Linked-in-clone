@@ -61,3 +61,15 @@ ul {
     color: #2977c9;
   }
 }
+
+@keyframes blink2 {
+  0% {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  50% {
+    background: gray;
+  }
+  100% {
+    background: #2977c9;
+  }
+}

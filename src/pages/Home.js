@@ -24,6 +24,9 @@ const Home = ({ user }) => {
           <RightSide />
         </Layout>
       </Content>
+      <p style={{ textAlign: "center" }}>
+        Copywrite ©2022 | Made by Abdul Muizz
+      </p>
     </Container>
   );
 };

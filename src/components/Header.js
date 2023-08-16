@@ -101,7 +101,7 @@ const Container = styled.div`
   top: 0;
   right: 0;
   width: 100%;
-  /* z-index: 100; */
+  z-index: 1;
   padding: 0 24px;
   position: fixed;
 `;
