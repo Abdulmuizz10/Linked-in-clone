@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { link } from "react-router-dom";
 import { useHistory } from "react-router-dom/";
+import { useLoginContext } from "../context/AuthContext";
 
 const Header = () => {
   const history = useHistory();
+  const { dispatch } = useLoginContext();
 
   const logout = () => {
-    localStorage.removeItem("user");
+    dispatch({ type: "LOGOUT_SUCCESS" });
     history.push("/");
   };
   return (

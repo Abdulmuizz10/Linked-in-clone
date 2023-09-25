@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const LeftSide = ({ user }) => {
+  const person = JSON.parse(user);
   return (
     <Container>
       <ArtCard>
@@ -9,7 +10,7 @@ const LeftSide = ({ user }) => {
           <CardBackground />
           <a>
             <Photo />
-            <Link>Welcome, {user.email}</Link>
+            <Link>Welcome, {person.email}</Link>
           </a>
           <a>
             <AddPhotoText>Add a photo</AddPhotoText>
@@ -56,7 +57,7 @@ const LeftSide = ({ user }) => {
 export default LeftSide;
 
 const Container = styled.div`
-  grid-area: leftside;
+  grid-area: "leftside";
 `;
 
 const ArtCard = styled.div`

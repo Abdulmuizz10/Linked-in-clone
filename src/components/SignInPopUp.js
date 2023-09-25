@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 import styled from "styled-components";
+import { useLoginContext } from "../context/AuthContext";
 
 const SignInPopUp = ({ setSignInPopUp }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-
-  const history = useHistory();
+  const { dispatch } = useLoginContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { username, password, email };
-    localStorage.setItem("user", JSON.stringify(user));
-    history.push("/home");
+    dispatch({ type: "LOGIN_SUCCESS", payload: user });
   };
 
   return (

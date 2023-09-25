@@ -25,7 +25,7 @@ const PostPopUp = ({ setPostPopUp, addPost, user }) => {
 
     setShareImage(image);
   };
-
+  const person = JSON.parse(user);
   return (
     <Container>
       <Box>
@@ -41,7 +41,7 @@ const PostPopUp = ({ setPostPopUp, addPost, user }) => {
             <form onSubmit={handleSubmit}>
               <div className="profile">
                 <img src="/images/user.svg" alt="" />
-                <h4>{user.email}</h4>
+                <h4>{person.email}</h4>
               </div>
               <textarea
                 placeholder="what do you want to talk about?"

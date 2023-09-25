@@ -68,7 +68,7 @@ const CenterSide = ({ user }) => {
 export default CenterSide;
 
 const Container = styled.div`
-  grid-area: centerside;
+  grid-area: "centerside";
 `;
 
 const CommonCard = styled.div`
