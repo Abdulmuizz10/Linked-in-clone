@@ -86,6 +86,7 @@ const Card = styled.div`
   padding: 20px;
   border-radius: 10px;
   position: relative;
+  animation: slideUp 1s ease-in;
 
   /* @media (max-width: 1025px) {
     height: 33%;

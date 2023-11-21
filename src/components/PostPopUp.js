@@ -25,7 +25,8 @@ const PostPopUp = ({ setPostPopUp, addPost, user }) => {
 
     setShareImage(image);
   };
-  const person = JSON.parse(user);
+
+  const person = user;
   return (
     <Container>
       <Box>
@@ -52,7 +53,7 @@ const PostPopUp = ({ setPostPopUp, addPost, user }) => {
                 {showImg && (
                   <input
                     type="file"
-                    accept="image/gif, image/jpeg, image/png"
+                    accept="image/*"
                     onChange={handleChange}
                     // style={{ display: "none" }}
                   />

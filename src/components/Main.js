@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Main = ({ post, deletePost, user }) => {
+  let { date } = post;
+  let updatedDate = date.substring(0, 25);
+  const person = user;
   return (
     <Container>
       <div>
@@ -17,10 +20,10 @@ const Main = ({ post, deletePost, user }) => {
                     fontFamily: "Times New Roman",
                   }}
                 >
-                  {user.email}
+                  {person.email}
                 </span>
                 <span style={{ color: "rgba(0, 0, 0, 1)" }}>{post.info}</span>
-                <span>{post.date}</span>
+                <span>{updatedDate}</span>
               </div>
             </a>
             <button>

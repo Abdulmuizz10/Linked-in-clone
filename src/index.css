@@ -73,3 +73,12 @@ ul {
     background: #2977c9;
   }
 }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(60%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

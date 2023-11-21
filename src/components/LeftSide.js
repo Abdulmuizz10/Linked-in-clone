@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const LeftSide = ({ user }) => {
-  const person = JSON.parse(user);
+  const person = user;
   return (
     <Container>
       <ArtCard>

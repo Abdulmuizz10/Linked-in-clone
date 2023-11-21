@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import styled from "styled-components";
+import { useLoginContext } from "../context/AuthContext";
 
 const GooglePopUp = ({ setGooglePopUp }) => {
-  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { dispatch } = useLoginContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const user = { email, password };
-    localStorage.setItem("user", JSON.stringify(user));
-    history.push("/home");
+    dispatch({ type: "LOGIN_SUCCESS", payload: user });
   };
 
   return (
@@ -76,6 +75,7 @@ const Card = styled.div`
   padding: 20px;
   border-radius: 10px;
   position: relative;
+  animation: slideUp 1s ease-in;
 
   .close {
     position: absolute;

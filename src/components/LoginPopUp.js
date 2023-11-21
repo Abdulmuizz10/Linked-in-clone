@@ -51,6 +51,7 @@ const Card = styled.div`
   padding: 20px;
   border-radius: 10px;
   position: relative;
+  animation: slideUp 1s ease-in;
 
   .close {
     position: absolute;
